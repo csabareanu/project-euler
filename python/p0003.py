@@ -27,9 +27,11 @@ def erathostene_sieve(nr):
 def compute(nr):
     assert nr >= 2
     prods = []
-    for x in range(2, math.ceil(nr/2)):
+    for x in range(2, math.ceil(nr/2) + 1):
+        # if all the divisors are computed break
         if nr == 1:
             break
+        # in case it has same divisors - ex. 8 - 2*2*2
         while nr % x == 0:
             prods.append(x)
             nr = nr / x

@@ -16,6 +16,3 @@ def compute(target):
 
 if __name__ == "__main__":
     print(compute(4000000))  # 4613732
-
-
-# According to P.E. official solution we can skip checking for even numbers and adjust the algorithm because every third number in a Fibonacci sequence is even
