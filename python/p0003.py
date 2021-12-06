@@ -14,6 +14,9 @@ import math
 def erathostene_sieve(nr):
     max_divisor = math.ceil(math.sqrt(nr))
     sieve = [True] * max_divisor
+    # mark 0 and 1 to be non primes
+    sieve[0] = False
+    sieve[1] = False
     upper = math.ceil(math.sqrt(max_divisor))
 
     for x in range(2, upper):
