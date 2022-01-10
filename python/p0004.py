@@ -5,7 +5,7 @@
 
 def compute(n):
     largest_number = 3 * int(n * '3')
-    smallest_number = 10 * (n-1)
+    smallest_number = 10 ** (n-1)
     the_largest_palindrome = 0
     the_largest_product = []
     for a in range(largest_number, smallest_number - 1, -1):

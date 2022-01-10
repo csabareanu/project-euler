@@ -13,15 +13,15 @@ import math
 # I've implemented here, just for curiosity purposes, the erathostene sieve, a method to determine the prime numbers until a specific number
 def erathostene_sieve(nr):
     max_divisor = math.ceil(math.sqrt(nr))
-    sieve = [True] * max_divisor
+    sieve = [True] * nr
     # mark 0 and 1 to be non primes
     sieve[0] = False
     sieve[1] = False
-    upper = math.ceil(math.sqrt(max_divisor))
+    upper = math.ceil(math.sqrt(nr))
 
     for x in range(2, upper):
         if sieve[x] == True:
-            for y in range(x ** 2, max_divisor, x):
+            for y in range(x ** 2, nr, x):
                 sieve[y] = False
 
     return [ind for ind, value in enumerate(sieve) if value == True]
